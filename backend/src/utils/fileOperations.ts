@@ -6,7 +6,7 @@ export default class FileOperations {
         try {
             if (typeof paths === "string") {
                 await fs.unlink(paths);
-                console.log("file deleted successfully");
+                // console.log("file deleted successfully");
                 return;
             }
             await Promise.all(
@@ -14,7 +14,7 @@ export default class FileOperations {
                     await fs.unlink(path);
                 })
             );
-            console.log("files deleted successfully");
+            // console.log("files deleted successfully");
         } catch (error) {
             console.log("error while deleting file:", error);
         }
